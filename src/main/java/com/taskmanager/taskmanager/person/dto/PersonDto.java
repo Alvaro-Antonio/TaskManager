@@ -9,6 +9,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.Value;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
 /**
@@ -20,9 +22,12 @@ import java.io.Serializable;
 @AllArgsConstructor
 @Builder
 public class PersonDto implements Serializable {
-    Long id;
-    String name;
-    DepartmentDTO department;
+    private Long id;
+
+    @NotNull
+    @NotBlank
+    private String name;
+    private DepartmentDTO department;
 
     public static PersonDto from (Person person){
         return PersonDto.builder()

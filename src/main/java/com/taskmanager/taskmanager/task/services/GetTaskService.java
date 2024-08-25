@@ -1,6 +1,6 @@
 package com.taskmanager.taskmanager.task.services;
 
-import com.taskmanager.taskmanager.task.Task;
+import com.taskmanager.taskmanager.task.jpa.Task;
 
 @FunctionalInterface
 public interface GetTaskService {

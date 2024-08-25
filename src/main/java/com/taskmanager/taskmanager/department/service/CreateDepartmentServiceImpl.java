@@ -1,7 +1,7 @@
 package com.taskmanager.taskmanager.department.service;
 
-import com.taskmanager.taskmanager.department.Department;
-import com.taskmanager.taskmanager.department.DepartmentRepository;
+import com.taskmanager.taskmanager.department.jpa.Department;
+import com.taskmanager.taskmanager.department.jpa.DepartmentRepository;
 import com.taskmanager.taskmanager.department.dto.DepartmentCreationDTO;
 import com.taskmanager.taskmanager.department.dto.DepartmentDTO;
 import lombok.RequiredArgsConstructor;

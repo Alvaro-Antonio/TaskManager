@@ -1,7 +1,7 @@
 package com.taskmanager.taskmanager.person.service;
 
-import com.taskmanager.taskmanager.department.Department;
-import com.taskmanager.taskmanager.department.DepartmentRepository;
+import com.taskmanager.taskmanager.department.jpa.Department;
+import com.taskmanager.taskmanager.department.jpa.DepartmentRepository;
 import com.taskmanager.taskmanager.department.exception.DepartmentNotFoundException;
 import com.taskmanager.taskmanager.person.dto.PersonDto;
 import com.taskmanager.taskmanager.person.dto.PersonUpdateDTO;
