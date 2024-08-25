@@ -2,6 +2,8 @@ package com.taskmanager.taskmanager.department;
 
 import com.taskmanager.taskmanager.department.dto.DepartmentCreationDTO;
 import com.taskmanager.taskmanager.department.dto.DepartmentDTO;
+import com.taskmanager.taskmanager.department.jpa.Department;
+import com.taskmanager.taskmanager.department.jpa.DepartmentRepository;
 import com.taskmanager.taskmanager.department.service.CreateDepartmentServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

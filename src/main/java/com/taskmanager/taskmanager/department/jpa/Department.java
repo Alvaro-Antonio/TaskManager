@@ -1,4 +1,4 @@
-package com.taskmanager.taskmanager.department;
+package com.taskmanager.taskmanager.department.jpa;
 
 import com.taskmanager.taskmanager.department.dto.DepartmentCreationDTO;
 import com.taskmanager.taskmanager.department.dto.DepartmentDTO;

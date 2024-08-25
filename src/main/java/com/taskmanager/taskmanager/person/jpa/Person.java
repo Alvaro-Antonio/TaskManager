@@ -1,13 +1,11 @@
 package com.taskmanager.taskmanager.person.jpa;
 
-import com.taskmanager.taskmanager.department.Department;
-import com.taskmanager.taskmanager.department.dto.DepartmentDTO;
+import com.taskmanager.taskmanager.department.jpa.Department;
 import com.taskmanager.taskmanager.person.dto.PersonCreationDto;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.NonNull;
 import lombok.Setter;
 
 import javax.persistence.Entity;
@@ -20,7 +18,6 @@ import javax.persistence.SequenceGenerator;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-import java.util.UUID;
 
 @Entity
 @Getter

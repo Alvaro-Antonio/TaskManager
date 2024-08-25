@@ -1,12 +1,11 @@
 package com.taskmanager.taskmanager.department.dto;
 
-import com.taskmanager.taskmanager.department.Department;
+import com.taskmanager.taskmanager.department.jpa.Department;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import lombok.Value;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
