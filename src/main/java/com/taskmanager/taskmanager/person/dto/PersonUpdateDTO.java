@@ -1,21 +1,27 @@
 package com.taskmanager.taskmanager.person.dto;
 
-import com.taskmanager.taskmanager.department.dto.DepartmentDTO;
-import com.taskmanager.taskmanager.person.jpa.Person;
-import lombok.Value;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 import java.io.Serializable;
 
-/**
- * DTO for {@link Person}
- */
-@Value
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
 public class PersonUpdateDTO implements Serializable {
 
-    @NotNull
-    String name;
+    private static final long serialVersionUID = 2674131188361976663L;
 
     @NotNull
-    DepartmentDTO department;
+    @NotBlank
+    private String name;
+
+    @NotNull
+    private Long departmentId;
 }
