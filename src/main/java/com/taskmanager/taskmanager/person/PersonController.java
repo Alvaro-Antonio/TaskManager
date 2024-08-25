@@ -17,12 +17,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value = "/person")
 public class PersonController {
 
-    @Autowired
-    private CreatePersonService createPersonService;
+    private final CreatePersonService createPersonService;
+
+    public PersonController(CreatePersonService createPersonService) {
+        this.createPersonService = createPersonService;
+    }
 
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(code = HttpStatus.ACCEPTED)
     public PersonDto createPerson(@RequestBody PersonCreationDto personCreationDto){
-        return this.createPersonService.create(Person.from(personCreationDto));
+        return this.createPersonService.create(personCreationDto);
     }
 }

@@ -2,7 +2,11 @@ package com.taskmanager.taskmanager.person.dto;
 
 import com.taskmanager.taskmanager.department.dto.DepartmentDTO;
 import com.taskmanager.taskmanager.person.jpa.Person;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import lombok.Value;
 
 import java.io.Serializable;
@@ -10,7 +14,10 @@ import java.io.Serializable;
 /**
  * DTO for {@link Person}
  */
-@Value
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @Builder
 public class PersonDto implements Serializable {
     Long id;

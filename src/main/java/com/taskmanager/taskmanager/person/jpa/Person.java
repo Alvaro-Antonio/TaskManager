@@ -1,6 +1,7 @@
 package com.taskmanager.taskmanager.person.jpa;
 
 import com.taskmanager.taskmanager.department.Department;
+import com.taskmanager.taskmanager.department.dto.DepartmentDTO;
 import com.taskmanager.taskmanager.person.dto.PersonCreationDto;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -44,10 +45,11 @@ public class Person {
     @JoinColumn(name = "id_department")
     private Department department;
 
-    public static Person from (PersonCreationDto personCreationDto){
+    public static Person from (PersonCreationDto personCreationDto, Department department){
         return Person.builder()
-                .department(personCreationDto.getDepartment())
+                .department(department)
                 .name(personCreationDto.getName())
                 .build();
+
     }
 }
