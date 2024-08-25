@@ -11,6 +11,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
@@ -26,8 +29,12 @@ public class Task {
     @SequenceGenerator(name = "task_generator", sequenceName = "task_sequence", allocationSize = 1)
     private Long id;
 
+    @NotNull
+    @NotBlank
+    @Size(max=120)
     private String title;
 
+    @Size(max = 300)
     private String description;
 
     private LocalDateTime duration;

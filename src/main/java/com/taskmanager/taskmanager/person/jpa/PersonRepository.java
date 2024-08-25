@@ -1,4 +1,4 @@
-package com.taskmanager.taskmanager.person;
+package com.taskmanager.taskmanager.person.jpa;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
