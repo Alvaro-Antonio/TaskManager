@@ -1,12 +1,11 @@
 package com.taskmanager.taskmanager.department.dto;
 
-import com.taskmanager.taskmanager.department.Department;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import lombok.Value;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -17,19 +16,12 @@ import java.io.Serializable;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class DepartmentDTO implements Serializable {
+public class DepartmentCreationDTO implements Serializable {
 
-    @NotNull
-    private Long id;
 
-    @NotNull
+    private static final long serialVersionUID = 9184773843357575918L;
+
     @NotBlank
+    @NotNull
     private String name;
-
-    public static DepartmentDTO from (Department department){
-        return DepartmentDTO.builder()
-                .id(department.getId())
-                .name(department.getName())
-                .build();
-    }
 }

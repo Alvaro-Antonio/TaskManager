@@ -28,5 +28,5 @@ public class PersonCreationDto implements Serializable {
     private String name;
 
    @NotNull
-   private Department department;
+   private Long departmentId;
 }
