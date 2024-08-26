@@ -44,8 +44,8 @@ public class TaskController {
     }
 
     @ResponseStatus(code = HttpStatus.OK)
-    @PutMapping(value = "/{id}")
-    public void allocatePerson(@RequestBody PersonDto personDto, @PathVariable Long id){
-        this.allocatePersonTask.allocatePerson(personDto.getId(), id);
+    @PutMapping(value = "/{taskId}/allocated")
+    public void allocatePerson(@RequestBody PersonDto personDto, @PathVariable Long taskId){
+        this.allocatePersonTask.allocatePerson(personDto.getId(), taskId);
     }
 }
