@@ -1,0 +1,23 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Task Manager</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>delete</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>add</mat-icon>
+    </button>
+  </mat-toolbar>
+
+  <div>
+    <nav>
+      <li><a routerLink="task" routerLinkActive="active" >First Component</a></li>
+     <li><a routerLink="departament" routeryLinkActive="active" >Second Component</a></li>
+    </nav>
+  </div>
+    <app-content></app-content>
+    <router-outlet />
+
