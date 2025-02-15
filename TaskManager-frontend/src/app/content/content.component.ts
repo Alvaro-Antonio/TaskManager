@@ -1,5 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import {MatCardModule} from '@angular/material/card';
+import { Person } from '../models/person';
+import { Departament } from '../models/departament';
 import {
   CdkDragDrop,
   moveItemInArray,
@@ -16,11 +18,22 @@ import {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ContentComponent {
-  todo = ['Get to work', 'Pick up groceries', 'Go home', 'Fall asleep'];
+  person: Person = {
+    id: 1,
+    name: 'John',
+    departament: {
+      id: 1,
+      name: 'IT'
+    }
+  };
+    
+  backlog = [this.person, this.person];
 
-  done = ['Get up', 'Brush teeth', 'Take a shower', 'Check e-mail', 'Walk dog'];
+  todo = [this.person, this.person, this.person];
 
-  drop(event: CdkDragDrop<string[]>) {
+  done = [this.person, this.person, this.person, this.person];
+
+  drop(event: CdkDragDrop<Person[]>) {
     if (event.previousContainer === event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
     } else {

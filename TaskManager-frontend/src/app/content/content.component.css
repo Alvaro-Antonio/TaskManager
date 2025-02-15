@@ -1,5 +1,5 @@
-.example-container {
-    width: 400px;
+.container {
+    width: 320px;
     max-width: 100%;
     margin: 0 25px 25px 0;
     display: inline-block;
@@ -9,11 +9,11 @@
   
   .example-list {
     border: solid 1px #ccc;
-    min-height: 60px;
-    background: white;
+    min-height: 100%;
     border-radius: 4px;
     overflow: hidden;
     display: block;
+    justify-items: center;
   }
   
   .example-box {
@@ -55,6 +55,23 @@
   }
   
   .example-card {
-    max-width: 400px;
-    margin-bottom: 8px;
+    max-width: 280px;
+    min-height: 315px;
+    margin-top: 1em;
+  }
+
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+  
+  .backlog {
+    background-color: #d3832867;
+  }
+  .todo { 
+    background-color: #325fdaa8;
+  }
+
+  .done {
+    background-color: #16910b80;
   }

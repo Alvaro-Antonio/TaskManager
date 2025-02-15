@@ -1,31 +1,72 @@
-<div class="example-container">
+<div class="container">
+  <h2>BackLog</h2>
+
+  <div
+    cdkDropList
+    #backlogList="cdkDropList"
+    [cdkDropListData]="backlog"
+    [cdkDropListConnectedTo]="[todoList]"
+    class="example-list backlog"
+    (cdkDropListDropped)="drop($event)">
+    @for (item of backlog; track item) {
+      <mat-card class="example-card" appearance="outlined" cdkDrag>
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>Shiba Inu</mat-card-title>
+          <mat-card-subtitle>{{item.name}}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          {{item.departament.name}}
+          <p>
+            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+            bred for hunting.
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+    }
+  </div>
+</div>
+
+<div class="container">
     <h2>To do</h2>
   
     <div
       cdkDropList
       #todoList="cdkDropList"
       [cdkDropListData]="todo"
-      [cdkDropListConnectedTo]="[doneList]"
-      class="example-list"
+      [cdkDropListConnectedTo]="[backlogList,doneList]"
+      class="example-list todo"
       (cdkDropListDropped)="drop($event)">
       @for (item of todo; track item) {
         <mat-card class="example-card" appearance="outlined" cdkDrag>
           <mat-card-header>
-            <mat-card-title-group>
-              <mat-card-title>Shiba Inu</mat-card-title>
-              <mat-card-subtitle>Large</mat-card-subtitle>
-              <img mat-card-lg-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
-            </mat-card-title-group>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>Shiba Inu</mat-card-title>
+            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
           </mat-card-header>
-          <mat-card-content >
+          <mat-card-content>
             {{item}}
+            <p>
+              The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+              A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+              bred for hunting.
+            </p>
           </mat-card-content>
+          <mat-card-actions>
+            <button mat-button>LIKE</button>
+            <button mat-button>SHARE</button>
+          </mat-card-actions>
         </mat-card>
       }
     </div>
   </div>
   
-  <div class="example-container">
+  <div class="container">
     <h2>Done</h2>
   
     <div
@@ -33,21 +74,28 @@
       #doneList="cdkDropList"
       [cdkDropListData]="done"
       [cdkDropListConnectedTo]="[todoList]"
-      class="example-list"
+      class="example-list done"
       (cdkDropListDropped)="drop($event)">
       @for (item of done; track item) {
 
         <mat-card class="example-card" appearance="outlined" cdkDrag>
           <mat-card-header>
-            <mat-card-title-group>
-              <mat-card-title>Shiba Inu</mat-card-title>
-              <mat-card-subtitle>Large</mat-card-subtitle>
-              <img mat-card-lg-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
-            </mat-card-title-group>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>Shiba Inu</mat-card-title>
+            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
           </mat-card-header>
-          <mat-card-content >
+          <mat-card-content>
             {{item}}
+            <p>
+              The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+              A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+              bred for hunting.
+            </p>
           </mat-card-content>
+          <mat-card-actions>
+            <button mat-button>LIKE</button>
+            <button mat-button>SHARE</button>
+          </mat-card-actions>
         </mat-card>
       }
     </div>

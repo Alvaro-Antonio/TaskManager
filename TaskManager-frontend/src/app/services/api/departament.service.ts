@@ -12,6 +12,6 @@ export class DepartamentService {
     constructor(private http: HttpClient, @Inject(API_URL) private apiUrl: string) {}
 
     getTasks(): Observable<Task[]> {
-      return this.http.get<Task[]>(`${this.apiUrl}/tasks`);
+      return this.http.get<Task[]>(`${this.apiUrl}/task`);
     }
 }
